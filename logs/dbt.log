@@ -1,0 +1,35 @@
+[0m17:28:45.688591 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6eaeaeceb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6eade7ef50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6ead1fffd0>]}
+
+
+============================== 17:28:45.695713 | f38859fd-bf8b-4b0e-ba1d-27b08ef6daa5 ==============================
+[0m17:28:45.695713 [info ] [MainThread]: Running with dbt=1.8.4
+[0m17:28:45.696191 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/rajat_2024/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt init', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:28:50.897472 [debug] [MainThread]: Starter project path: /mnt/c/Users/RBELGUNDI/Workspace/dbt-env-cap/lib/python3.10/site-packages/dbt/include/starter_project
+[0m17:28:51.003434 [info ] [MainThread]: 
+Your new dbt project "sc_logistics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:28:51.003793 [info ] [MainThread]: Setting up your profile.
+[0m17:30:41.013626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6af8c24f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6af7326fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6af7327d00>]}
+
+
+============================== 17:30:41.021282 | e0776c99-419b-40db-a5e7-45bb48972b1b ==============================
+[0m17:30:41.021282 [info ] [MainThread]: Running with dbt=1.8.4
+[0m17:30:41.021761 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/rajat_2024/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m17:30:51.741368 [info ] [MainThread]: A project called sc_logistics already exists here.
+[0m17:30:51.749841 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 10.78069, "process_user_time": 1.148846, "process_kernel_time": 0.310006, "process_mem_max_rss": "85236", "process_out_blocks": "16", "process_in_blocks": "0"}
+[0m17:30:51.751205 [debug] [MainThread]: Command `dbt init` succeeded at 17:30:51.750955 after 10.78 seconds
+[0m17:30:51.752038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6af8c24f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6af74ea980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6af735a080>]}
+[0m17:30:51.752915 [debug] [MainThread]: Flushing usage events

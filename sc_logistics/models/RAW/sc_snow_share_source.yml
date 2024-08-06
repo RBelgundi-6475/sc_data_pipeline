@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: snow_share
+    database: SC_INBOUND_SHARED_DB
+    schema: SC_SAMPLE_DATA
+    tables:
+      - name: SC_PLANT_PORTS_TBL
+      - name: SC_PRODUCTS_PER_PLANT_TBL
+      - name: SC_VMI_CUSTOMERS_TBL

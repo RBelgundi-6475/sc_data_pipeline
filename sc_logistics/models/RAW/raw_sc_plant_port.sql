@@ -1,0 +1,5 @@
+
+SELECT
+PLANT_CODE,
+PORT
+FROM {{source('snow_share','SC_PLANT_PORTS_TBL')}}

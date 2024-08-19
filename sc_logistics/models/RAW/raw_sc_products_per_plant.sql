@@ -1,0 +1,5 @@
+
+SELECT 
+    PLANT_CODE,
+    PRODUCT_ID
+FROM {{source("snow_share","SC_PRODUCTS_PER_PLANT_TBL")}}

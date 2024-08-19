@@ -1,0 +1,85 @@
+models:
+  - name: dim_customer
+    # config:
+    #   contract:
+    #     enforced: true
+    columns:
+      - name: Customer
+        # data_type: VARCHAR(40)
+        # description: primary key of the dim_customer model
+        # constraints:
+        #   - type: not_null
+        #   - type: primary_key # not enforced  -- will warn & include
+          # - type: check       # not supported -- will warn & skip
+            # expression: "id > 0"
+        tests:
+          - unique 
+        
+
+  - name: dim_plant
+    columns:
+      - name: Plant_Code
+        tests: 
+          - unique
+          - not_null
+  
+  - name: plant_port_relation
+    columns: 
+      - name: Plant_Code
+        tests: 
+          - relationships:
+              to: ref('dim_plant')
+              field: Plant_Code
+      - name: Port_ID
+        tests:
+          - relationships:
+              to: ref('dim_port')
+              field: Port_ID
+
+  - name: fact_orders
+    columns: 
+      # - name: carrier
+      #   tests: 
+      #     - relationships:
+      #         to: ref('dim_freight')
+      #         field: carrier
+      - name: product_id
+        tests:
+          - relationships:
+              to: ref('dim_product')
+              field: product_id
+      - name: plant_code
+        tests: 
+          - relationships:
+              to: ref('dim_plant')
+              field: plant_code
+
+  - name: dim_port
+    columns:
+      - name: Port_ID
+        tests: 
+          - not_null
+  
+  - name: plant_customer_relation
+    columns:
+      - name: Plant_Code
+        tests: 
+          - not_null
+  
+  - name: plant_product_relation
+    columns:
+      - name: Plant_Code
+        tests:
+          - not_null
+  
+  - name: dim_freight
+    columns:
+      - name: Carrier
+        tests:
+          - not_null
+  
+  - name: dim_product
+    columns:
+      - name: Product_ID
+        tests: 
+          - not_null

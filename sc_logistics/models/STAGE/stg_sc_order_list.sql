@@ -1,0 +1,22 @@
+{{ config(
+    tags=["stage"]
+) }}
+
+select
+    ORDER_ID::NUMBER as ORDER_ID,
+    to_date(ORDER_DATE,'MM/DD/YY') as ORDER_DATE,
+    ORIGIN_PORT::VARCHAR(9) as ORIGIN_PORT,
+    CARRIER::VARCHAR(9) as CARRIER,
+    TPT::INTEGER as TPT,
+    SERVICE_LEVEL::VARCHAR(5) as SERVICE_LEVEL,
+    SHIP_AHEAD_DAY_COUNT::INTEGER as SHIP_AHEAD_DAY_COUNT,
+    SHIP_LATE_DAY_COUNT::INTEGER as SHIP_LATE_DAY_COUNT,
+    CUSTOMER::VARCHAR(40) as CUSTOMER,
+    PRODUCT_ID::NUMBER(8,0) as PRODUCT_ID,
+    PLANT_CODE::VARCHAR(10) as PLANT_CODE,
+    DESTINATION_PORT::VARCHAR(9) as DESTINATION_PORT,
+    replace(UNIT_QUANTITY,' units','')::INTEGER as UNIT_QUANTITY,
+    regexp_substr(WEIGHT, '^[0-9]+\.?[0-9]*')::decimal(8,2) as WEIGHT_VALUE,
+    regexp_substr(WEIGHT,'[a-zA-Z]+') as WEIGHT_UNIT
+from {{ref('raw_sc_order_list')}}
+

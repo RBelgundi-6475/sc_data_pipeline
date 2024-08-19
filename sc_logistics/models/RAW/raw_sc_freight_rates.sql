@@ -5,7 +5,7 @@ SELECT
     $3::string as dest_port,
     $4::string as min_wt_qty,
     $5::string as max_wt_qty,
-    $6::string as service_level,
+    $6::string as svc_cd,
     $7::string as minimum_cost,
     $8::string as rate,
     $9::string as transport_mode,

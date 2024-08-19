@@ -32,7 +32,19 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   sc_logistics:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    # example:
+    #   +materialized: view
     RAW:
       +materialized: table
+      +schema: SC_RAW
+    STAGE:
+      +materialized: table
+      +schema: SC_STAGE 
+      # +tags: stage
+    DW:
+      +materialized: table
+      +schema: SC_DW
+    DM:
+      +schema: SC_DM
+    DP:
+      +schema: SC_DP

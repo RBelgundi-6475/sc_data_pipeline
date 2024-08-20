@@ -3,6 +3,7 @@
 This project implements a data pipeline that ingests, processes and transforms supply chain data from various sources into actionable insights. The pipeline is built using cloud-native technologies, including AWS, Snowflake, and DBT, and is designed to be scalable, reliable, and easy to manage.
 ## Architecture
 The pipeline architecture is illustrated below:
+![Data Pipeline Architecture](data_pipeline_diagram.png)
 ### Components
 1. **Data Sources**: 
     - API Gateway (for real-time data ingestion)
